@@ -1,8 +1,9 @@
-set(COMPONENT_SRCS "ble_hidd_demo_main.c"
-                   "esp_hidd_prf_api.c"
+set(COMPONENT_SRCS "hal_ble.c"
                    "hid_dev.c"
-                   "hid_device_le_prf.c")
-set(COMPONENT_ADD_INCLUDEDIRS ".")
+                   "hid_device_le_prf.c"
+                   "keyboard.c")
+set(COMPONENT_ADD_INCLUDEDIRS "." "../../main")
+set(COMPONENT_REQUIRES bt u8g2_OLED)
 
 register_component()
 
